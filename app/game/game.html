@@ -6,10 +6,17 @@
 <style>
 .button-error {
             background: rgb(202, 60, 60); /* this is a maroon */
+
         }
 
   .button-secondary {
-          background: rgb(28, 184, 65); /* this is a green */   }
+          background: rgb(28, 184, 65); /* this is a green */
+
+      }
+      space{
+        padding-left: 50px;
+        padding-right: 50px;
+      }
   body {
     background-color: #ecf0f1;
     font-family: "Georgia";
@@ -28,7 +35,12 @@
   </div> -->
   <div ng-init="count=0">
 
-
+    <div class="center">
+      <button class="button-error pure-button" ng-click="count = count - 1" type=button>Previous</button>
+      <space></space>
+      <button class="button-secondary pure-button" ng-click="count = count + 1" type=button>Next </button>
+    <!--   <span> count: {{count}}</span>
+     --></div>
 
 <div ng-if="count == 0">
     <p class="question center">{{question.$value}}</p>
@@ -142,11 +154,7 @@
    </div>
 </div>
 
-<div class="center">
-  <button class="button-error pure-button" ng-click="count = count - 1" type=button>Previous</button>
-  <button class="button-secondary pure-button" ng-click="count = count + 1" type=button>Next </button>
-<!--   <span> count: {{count}}</span>
- --></div>
+
 
 
 

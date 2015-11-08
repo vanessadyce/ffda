@@ -22,6 +22,80 @@
     </style>
 </head>
     <body>
+
+      <script>
+        $(document).ready(function(){
+
+
+
+          Leap.loop({hand: function(hand){
+
+            var cursor = document.getElementById('cursor');
+            var output = document.getElementById('output');
+
+            console.log(output);
+
+            var screenPosition = hand.screenPosition(hand.palmPosition);
+
+            var outputContent = "x: " + (screenPosition[0].toPrecision(4)) + 'px' +
+                   "        <br/>y: " + (screenPosition[1].toPrecision(4)) + 'px' +
+                   "        <br/>z: " + (screenPosition[2].toPrecision(4)) + 'px';
+
+                   x = screenPosition[0].toPrecision(4);
+                   y = screenPosition[1].toPrecision(4);
+
+                   if(x >= 820 && x <= 1040){
+                     if(y >= 390 && y <= 430){
+                      // alert("Chaning page");
+                       window.location.href = "#/game";
+                     }
+                   }
+
+                  //  if(x > 900){
+                  //    console.log("in x")
+                  //    if(y > 500){
+                  //      console.log('in y');
+                   //
+                  //       window.location.href = "#/game";
+                  //    }
+                  //  }
+
+
+            // hide and show the cursor in order to get second-topmost element.
+            cursor.style.visibility = "hidden";
+            var el = document.elementFromPoint(
+                hand.screenPosition()[0],
+                hand.screenPosition()[1]
+            );
+            cursor.style.visibility = "visible";
+
+            if (el){
+              outputContent += '<br>Topmost element: '+ el.tagName + ' #' + el.id +  ' .' + el.className;
+            }
+
+            output.innerHTML = outputContent;
+
+            cursor.style.left = screenPosition[0] + 'px';
+            cursor.style.top = screenPosition[1] + 'px';
+
+
+          }})
+          .use('screenPosition', {
+            scale: 1
+          });
+        });
+      </script>
+
+
+
+
+
+
+
+
+
+
+
     <div class="splash-container">
         <div class="splash">
         	<div class="row">
