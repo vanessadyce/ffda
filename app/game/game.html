@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+
+</head>
+<body>
+
+<!-- 
+  <div id="output" class="output"></div>
+  <div id="cursor"></div> -->
+
+
+  <!-- <div class="buttonWrap">
+    <button>Hover Me!</button>
+  </div> -->
+  <div ng-init="count=0">
+
+
+
+
+<div ng-if="count == 0">
+    <p class="question center">{{question.$value}}</p>
+    <div ng-controller="gameCtrl">
+    <div class="boxContainer center">
+     <div class="row">
+       <div class="box">{{choice1.$value}}</div>
+       <div class="box">{{choice2.$value}}</div>
+     </div>
+     <div class="row">
+        <div class="box">{{choice3.$value}}</div>
+       <div class="box">{{choice4.$value}}</div>
+     </div>
+    </div>
+  </div>
+</div>
+
+<div ng-if="count == 1">
+    <p class="question center">{{question2.$value}}</p>
+      <div ng-controller="gameCtrl">
+      <div class="boxContainer center">
+       <div class="row">
+         <div class="box">{{choice2_1.$value}}</div>
+         <div class="box">{{choice2_2.$value}}</div>
+       </div>
+       <div class="row">
+         <div class="box">{{choice2_3.$value}}</div>
+         <div class="box">{{choice2_4.$value}}</div>
+       </div>
+     </div>
+   </div>
+</div>
+
+<div ng-if="count == 2">
+    <p class="question center">{{question3.$value}}</p>
+      <div ng-controller="gameCtrl">
+      <div class="boxContainer center">
+       <div class="row">
+         <div class="box">{{choice3_1.$value}}</div>
+         <div class="box">{{choice3_2.$value}}</div>
+       </div>
+       <div class="row">
+         <div class="box">{{choice3_3.$value}}</div>
+         <div class="box">{{choice3_4.$value}}</div>
+       </div>
+     </div>
+   </div>
+</div>
+
+<div ng-if="count == 3">
+    <p class="question center">{{question4.$value}}</p>
+      <div ng-controller="gameCtrl">
+      <div class="boxContainer center">
+       <div class="row">
+         <div class="box"><img src={{choice4_1.$value}} style="width:300px;height:300px"></div>
+         <div class="box"><img src={{choice4_2.$value}} style="width:300px;height:300px"></div>
+       </div>
+       <div class="row">
+         <div class="box"><img src={{choice4_3.$value}} style="width:300px;height:300px"></div>
+         <div class="box"><img src={{choice4_4.$value}} style="width:300px;height:300px"></div>
+       </div>
+     </div>
+   </div>
+</div>
+
+<div ng-if="count == 4">
+    <p class="question center">{{question5.$value}}</p>
+      <div ng-controller="gameCtrl">
+      <div class="boxContainer center">
+       <div class="row">
+         <div class="box"><img src={{choice5_1.$value}} style="width:300px;height:300px"></div>
+         <div class="box"><img src={{choice5_2.$value}} style="width:300px;height:300px"></div>
+       </div>
+       <div class="row">
+         <div class="box"><img src={{choice5_3.$value}} style="width:300px;height:300px"></div>
+         <div class="box"><img src={{choice5_4.$value}} style="width:300px;height:300px"></div>
+       </div>
+     </div>
+   </div>
+</div>
+
+<div ng-if="count == 5">
+    <p class="question center">{{question6.$value}}</p>
+      <div ng-controller="gameCtrl">
+      <div class="boxContainer center">
+       <div class="row">
+         <div class="box"><img src={{choice6_1.$value}} style="width:300px;height:300px"></div>
+         <div class="box"><img src={{choice6_2.$value}} style="width:300px;height:300px"></div>
+       </div>
+       <div class="row">
+         <div class="box"><img src={{choice6_3.$value}} style="width:300px;height:300px"></div>
+         <div class="box"><img src={{choice6_4.$value}} style="width:300px;height:300px"></div>
+       </div>
+     </div>
+   </div>
+</div>
+
+<div ng-if="count == 6">
+    <p class="question center">{{question7.$value}}</p>
+      <div ng-controller="gameCtrl">
+      <div class="boxContainer center">
+       <div class="row">
+         <div class="box"><img src={{choice7_1.$value}} style="width:300px;height:300px"></div>
+         <div class="box"><img src={{choice7_2.$value}} style="width:300px;height:300px"></div>
+       </div>
+       <div class="row">
+         <div class="box"><img src={{choice7_3.$value}} style="width:300px;height:300px"></div>
+         <div class="box"><img src={{choice7_4.$value}} style="width:300px;height:300px"></div>
+       </div>
+     </div>
+   </div>
+</div>
+
+<div class="center">
+  <button ng-click="count = count - 1" type=button class="btn-btn-success">Previous </button>
+  <button ng-click="count = count + 1" type=button class="btn-btn-success">Next </button>
+  <span> count: {{count}}</span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
