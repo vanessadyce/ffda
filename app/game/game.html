@@ -1,8 +1,20 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.button-error {
+            background: rgb(202, 60, 60); /* this is a maroon */
+        }
 
-
+  .button-secondary {
+          background: rgb(28, 184, 65); /* this is a green */   }
+  body {
+    background-color: #ecf0f1;
+    font-family: "Georgia";
+  }
+</style>
 </head>
 <body>
 
@@ -17,6 +29,7 @@
   <div ng-init="count=0">
 
 
+<button class="button-warning pure-button" href="#home">Previous</button>
 
 
 <div ng-if="count == 0">
@@ -132,45 +145,10 @@
 </div>
 
 <div class="center">
-  <button ng-click="count = count - 1" type=button class="btn-btn-success">Previous </button>
-  <button ng-click="count = count + 1" type=button class="btn-btn-success">Next </button>
-  <span> count: {{count}}</span>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <button class="button-error pure-button" ng-click="count = count - 1" type=button>Previous</button>
+  <button class="button-secondary pure-button" ng-click="count = count + 1" type=button>Next </button>
+<!--   <span> count: {{count}}</span>
+ --></div>
 
 
 
