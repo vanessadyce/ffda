@@ -6,17 +6,46 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <meta name="description" content="A leap motion sensor enable web app to help little kids point to correct answer if they can’t read or write yet.">
+  <title>LeapAhead</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <link rel="stylesheet" href="css/layouts/marketing.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   <script src="https://js.leapmotion.com/leap-0.6.4.js"></script>
   <script src="http://js.leapmotion.com/leap-plugins-0.1.11.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+
+  <div ng-view></div>
+
+  <div><span app-version></span></div>
+
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/ui-bootstrap.min.js"></script>
+  <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+  <script src="bower_components/firebase/firebase.js"></script>
+  <script rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css"></script>
+  <script src="app.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+
+
+
   <style>
     body {
       font-size: 1.5em;
@@ -49,7 +78,6 @@
     .center {
     margin: auto;
     width: 60%;
-    border:3px solid #73AD21;
     padding: 10px;
     text-align: center;
     }
@@ -78,50 +106,89 @@
     }
 
   </style>
+
+
 </head>
 
 <body>
-  <!-- <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul> -->
+    <div class="header">
+        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+            <a class="pure-menu-heading" href="">LeapAhead</a>
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
+                <li class="pure-menu-item"><a href="#/game" class="pure-menu-link">Game</a></li>
+            </ul>
+        </div>
+    </div>
 
-  <div ng-view></div>
+    <div class="splash-container">
+        <div class="splash">
+            <h1 class="splash-head">Welcome to LeapAhead!</h1>
+            <p class="splash-subhead">
+                LeapAhead is a leap motion sensor web app that is used to help little kids point to correct answer if they can’t read or write yet. It is targeted towards toddlers; ideal for kids with learning needs.
+            </p>
+            <p>
+                <a href="#/game" class="pure-button pure-button-primary">Let's Get Started!</a>
+            </p>
+        </div>
+    </div>
 
-  <div><span app-version></span></div>
+    <div class="content-wrapper">
+        <div class="content">
+            <h2 class="content-head is-center">About the team</h2>
 
-   <header>
-            <nav class="navbar navbar-default">
-            <div class="container">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="home/home.html"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="profile/profile.html"><i class="fa fa-comment"></i>Profile</a></li>
-                    <li><a href="#game"><i class="fa fa-comment"></i>Game</a></li>
-                </ul>
+            <div class="pure-g">
+                <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+
+                  <p>
+                      A team of UVa Students.
+                  </p>
+                </div>
             </div>
-            </nav>
-    </header>
+        </div>
+
+        <div class="ribbon l-box-lrg pure-g">
+            <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+                <h2 class="content-head content-head-ribbon">Laboris nisi ut aliquip.</h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor.
+                </p>
+            </div>
+        </div>
+    </div>
 
 
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="bower_components/ui-bootstrap.min.js"></script>
-  <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
-  <script src="bower_components/firebase/firebase.js"></script>
-  <script rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css"></script>
-  <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   <!-- ////////////////////////////////////////////////////////////////////////// -->
