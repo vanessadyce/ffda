@@ -1,6 +1,38 @@
-<p>This is the partial for home view</p>
+  <head> 
+    <style>
+    body {
+    	background-color: #ecf0f1;
+    }
 
-<div ng-controller="mainCtrl">
-	{{message}}
-</div>
+    .splash-head {
+    	line-height: 180px;
+    	text-align: center;
+    }
+
+    .splash-subhead {
+    	text-align: center;
+    }
+
+    p {
+    	text-align: center;
+    }
+    </style>
+</head>
+    <body>
+    <div class="splash-container">
+        <div class="splash">
+        	<div class="row">
+        	</div>
+        	<div class="row">
+        	</div>
+            <h1 class="splash-head">Welcome to LeapAhead!</h1>
+            <p class="splash-subhead">
+                LeapAhead is a leap motion sensor web app that is used to help little kids point to correct answer if they can’t read or write yet. It is targeted towards toddlers; ideal for kids with learning needs.
+            </p>
+            <p>
+                <a href="#/game" class="pure-button pure-button-primary">Let's Get Started!</a>
+            </p>
+        </div>
+    </div>
+   </body>
 
