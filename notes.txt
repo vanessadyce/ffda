@@ -1,0 +1,11 @@
+Websocket tutorial:
+https://www.npmjs.com/package/websocket
+
+LeapJS plugins:
+https://github.com/leapmotion/leapjs-plugins
+
+Leap Motion Coordinate System:
+https://developer.leapmotion.com/documentation/javascript/devguide/Leap_Coordinate_Mapping.html
+
+Endpoint:
+http://localhost:3000/leap
