@@ -1,14 +1,12 @@
-# angular-seed — the seed for AngularJS apps
+# LeapAhead — Education app for younger kids 
 
-This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
-You can use it to quickly bootstrap your angular webapp projects and dev environment for these
-projects.
+This project is an application anticipated to encourage children to learn though interactivity. This project
+integrates a Leap Motion sensor which allows the child to point to to answers in a question-based app.
+This is a useful project and could be extended to allow for handwriting exercises as the Leap Motion sensor
+has an awareness of time. This was built at HackDuke in collaboration with Deepak Chelluri, Ronnie Smith, and 
+Sydney Johnson [DevPost](http://devpost.com/software/leap-ahead).
 
-The seed contains a sample AngularJS application and is preconfigured to install the Angular
-framework and a bunch of development and testing tools for instant web development gratification.
-
-The seed app doesn't do much, just shows how to wire two controllers and views together.
-
+This application used AngularJS, Leap Motion SDK, Firebase, Web Sockets, and Node.
 
 ## Getting Started
 
